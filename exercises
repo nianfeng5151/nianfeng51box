@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nianfeng51的html标签笔记</title>
+</head>
+<style>
+    code{
+        font-size: 20px;
+        color: brown;
+    }
+</style>
+<body style="background-color: antiquewhite;">
+    <div style="display: flex;flex-direction: column;
+    line-height: 1.7;margin: 18px; font-size: larger;">
+
+        <!-- 这是一个注释标签 -->
+         <p><code>!DOCTYPE html</code>
+        用于声明这是一个html文件
+         </p>
+
+          <p><code>a</code>
+        用于指定超链接,后可根据是否有href属性，来增加不同值
+        <ol>
+            <li>如果有href，常用于规定链接的目标 URL，也就是网站地址，
+        <br>举例：<code> a href="http://www.runoob.com/" /a</code>
+        <br>hreflang、media、rel、target 以及 type 属性，<b>必须在href存在时才能用</b> 
+        <ul>
+            <br>
+            <li>
+                hreflang，指定网页语言
+                <br>举例：<code>a <b> hreflang="en"</b> href="http://www.runoob.com/" /a</code>
+            </li>
+            <br>
+
+            <li>
+                media,用于指定特殊的设备，如打印机、移动设备、电视等，进行优化，规定不同的值，类似于网页的css功能？
+                <br>举例：<code>a href="/tags/att-a-media.html?output=print"<b> media="print and (resolution:300dpi)"</b>  /a</code>
+                <br>这里指定了特殊设备 打印机 ，并规定分辨率（resolution）为300。
+            </li>
+            <br>
+
+            <li>rel,用于指定当前文档与被链接文档的关系
+                <br>举例：如添加外部样式表  
+                <code>a href="style.css"<b> rel="stylesheet"</b>  /a</code>
+                <br>
+        
+                <ul>
+                    <li>
+                        <code>alternate </code>当前可打印版本
+                    </li>
+                    <li>
+                        <code>start </code>集合中的第一个文档
+                    </li>
+                    <li>
+                        <code>next </code>集合中的下一个文档
+                    </li>
+                    <li>
+                        <code>prev </code>集合中的前一个文档
+                    </li>
+                    <li>
+                        <code>content </code>文档目录
+                    </li>
+                    <li>
+                        <code>index </code>文档索引
+                    </li>
+                    <li>
+                        <code>glossary </code>文档中所用字词的术语表或解释
+                    </li>
+                    <li>
+                        <code>copyright </code>包含版权信息的文档
+                    </li>
+                    <li>
+                        <code>chapter </code>章
+                    </li>
+                    <li>
+                        <code>section </code>节
+                    </li>
+                    <li>
+                        <code>subsection </code>字段
+                    </li>
+                    <li>
+                        <code>appendlx </code>附录
+                    </li>
+                    <li>
+                        <code>help </code>帮助文档
+                    </li>
+                    <li>
+                        <code>nofollow </code>Google 使用 "nofollow"，用于指定 Google 搜索引擎不要跟踪链接。
+                    </li>
+                    <li>
+                        <code>licence </code>许可证，协议？
+                        <code>tag</code>标签
+                        <code>friend </code>合作伙伴？
+                    </li>
+                    
+                </ul>
+                <br>
+                <li>
+                    target用于规定在何处打开链接
+                    <br>举例：
+                    <code>a href="www.跟楞半倒电视台.com" <b>target="_blank" </b> 在外部打开跟楞半倒电视台
+                        /a</code> 
+                    <ul>
+                        <li><code>_blank</code>在外部（跳转外部链接？）</li>
+                        <li><code>_self</code>默认，在相同框架打开被链接文档</li>（下一级？）
+                        <li><code>_parent</code>在 父 框架集 中打开被链接文档。（打开想同级的另一个？）</li>
+                        <li><code>_top</code>在整个窗口中打开被链接文档（不懂555）</li>
+                        <li><code>_framename</code>在指定的框架中打开被链接文档。（不懂555）</li>
+                    </ul>
+                </li>
+                <br>
+                <li>
+                    type用于指定被连接网页的MIME类型
+                    <br>举例：<code>a href="www.跟楞半倒电视台.com" <b>tyoe="text/html"</b></code>
+                    <br>告诉浏览器该地址是文字/html文件
+                    <br>MIME就是文件的后缀名，如.jpg、.png、.zip等
+                </li>
+            </li>
+
+        </ul>
+             </li>
+             <br>
+
+             <li>其余属性用于指定href链接的作用
+                <ul>
+                    <li>
+                        <code>download</code>用于指定下载链接地址
+                        <br>举例：<a href="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMvNFpQXUf6CdR20ufF9NMgvrgIKR18wACyCcAAismCFbm1NM9rIE_EzYE.png.png" 
+                        download="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMvNFpQXUf6CdR20ufF9NMgvrgIKR18wACyCcAAismCFbm1NM9rIE_EzYE.png.png">
+                        ciallow
+                    <img  src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMvNFpQXUf6CdR20ufF9NMgvrgIKR18wACyCcAAismCFbm1NM9rIE_EzYE.png" alt="杂鱼杂鱼"
+                         width="150" height="150" >
+                        </a> 
+                        <p>将图片放置于A标签内，也可以点击下载</p>
+                        
+                    </li>
+                </ul>
+             </li>
+        </ol>
+         </p>
+         <br>
+         
+    </div>
+
+    <div style="display: flex;flex-direction: column;
+    line-height: 1.7;margin: 18px; font-size: larger;">
+        <p><code>abbr </code>标签用来表示一个缩写词或者首字母缩略词
+            <br>当鼠标放上去后会出现titter标签的内容用来解释缩写
+            <br>举例：我正在学习<abbr title="超文本标记语言">html</abbr>中各种各样的标签
+        </p>
+        
+        <p><code>address</code>标签定义文档作者/所有者的联系信息。
+            <br>举例：<address>此笔记由<a href="mailto:nianfeng51@126.com">nianfeng51</a>制作</address>
+            其中mailto用于链接邮箱
+        </p>
+
+        <!-- 这是一个用于确定图片中具体坐标coords的工具 -->
+         <div>
+            <style>
+        #coordTip {
+            position: fixed;
+            background: #000;
+            color: #fff;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            display: none;
+        }
+        img {
+            border: 1px solid #ccc;
+        }
+            </style>
+
+              <h3>鼠标移到图片上查看坐标 (原点在左上角)</h3>
+    <!-- 替换成你的目标图片链接 -->
+    <img 
+        id="targetImg" 
+        src="https://i-1.7k8k.com/2024/0108/08d73ff13a7847288970f14e5605d4e6.jpg"
+        
+        height="150px"
+        alt="待拾取坐标的图片"
+    >
+    <div id="coordTip"></div>
+
+    <script>
+        const img = document.getElementById('targetImg');
+        const tip = document.getElementById('coordTip');
+
+        img.addEventListener('mousemove', (e) => {
+            // 获取鼠标在图片内的相对坐标
+            const rect = img.getBoundingClientRect();
+            const x = Math.round(e.clientX - rect.left);
+            const y = Math.round(e.clientY - rect.top);
+            // 显示坐标提示
+            tip.style.display = 'block';
+            tip.style.left = `${e.clientX + 10}px`;
+            tip.style.top = `${e.clientY + 10}px`;
+            tip.innerText = `X: ${x}， Y: ${y}`;
+        });
+
+        img.addEventListener('mouseleave', () => {
+            tip.style.display = 'none';
+        });
+    </script>
+            
+         </div>
+
+
+        <p>
+            <code>area</code>  标签用于在一张img中划定出几个范围用于链接
+            <br>嵌套于<code>map</code>标签内
+            <br>举例：
+            <img src="https://i-1.7k8k.com/2024/0108/08d73ff13a7847288970f14e5605d4e6.jpg" alt="千恋万花" height="150" usemap="#4399">
+            <map name="4399">
+                <area shape="circle" coords="40,48,20" href="https://ts1.tc.mm.bing.net/th/id/R-C.b8b848f28fde619141df12eb2c0375e2?rik=isRLJXDwe5oaUg&riu=http%3a%2f%2fc-ssl.duitang.com%2fuploads%2fitem%2f201710%2f01%2f20171001143554_eSac5.jpeg&ehk=Zmep6feE3yIL9f5fFyP%2bANzRS5bJjcZqAtaHYjd12v0%3d&risl=&pid=ImgRaw&r=0" alt="朝武芳乃">
+                <area shape="circle" coords="85,50,15" href="https://ts4.tc.mm.bing.net/th/id/OIP-C.ViHdKIswvB5VdzwFML7Q-AHaJl?pid=ImgDet&w=474&h=613&rs=1&o=7&rm=3" alt="常陆茉子">
+                <area shape="circle" coords="132,52,20 " href="https://pic2.zhimg.com/v2-399aebb3740e23b71b7497d1b149da09_r.jpg" alt="丛雨">
+                <area shape="circle" coords="180,60,20 " href="https://yxlzls.yxbao.com/game/201610/09/51c7a174c4.jpg" alt="鞍马小春">
+                <area shape="circle" coords="226,41,20 " href="https://pic2.zhimg.com/v2-f6b7b0215fdca54e50ddf1def4919312_r.jpg" alt="蕾娜">
+            </map>
+            <br>点击以上图片中任务的头部可跳转外部图片，可惜没有芦花姐
+        </p>
+        <br>
+        <p><code>
+            article </code>用于将内容独立于文章之外
+            <br>举例：<article>
+                article的内容与文章无关，用于存放评论、文章故事等
+                <br>标签定义的内容本身必须是有意义的且必须是独立于文档的其余部分。
+            </article>
+        </p>
+        <p>
+            <code>aside</code>标签用于定义artice外的内容（用于侧边栏）（aside的内容应该与附近相关，对附近内容进行解释）
+            <br>举例：<p>My family and I visited The Epcot center this summer.</p>
+            <aside>
+               <h4>Epcot Center</h4>
+               <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+               </aside>举例中aside就对上文p标签中Epcot Center进行了说明
+        </p>
+        <br>
+        <p><code>audio</code>标签用于定义音频，目前仅支持Mp3、Wav、Ogg三种形式
+        <br>举例：<audio controls>
+            <source src="">
+        </audio>
+        <br>contrlos用于添加控制面板
+    </p>
+
+       
+    </div>
+    
+</body>
+</html>
