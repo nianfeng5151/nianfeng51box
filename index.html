@@ -2,13 +2,67 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="kingwords" content="HTML Tag Practice">
-    <meta name="author" content="nianfeng51">
-    <title>nianfeng51的html标签笔记</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 </head>
 <style>
+    body {
+        background-color: rgb(214, 162, 97);
+        margin: 0;
+    }
+
+    div,
+    li {
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    /* * {
+        border: 1px solid black;
+
+    } */
+
+    * {
+        line-height: 1.7;
+
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .flex1 {
+        flex: 1
+    }
+
+    .column {
+        flex-direction: column;
+    }
+
+    .zongse {
+        background-color: rgb(229, 145, 36);
+    }
+
+    .baise {
+        background-color: rgb(229, 204, 166);
+    }
+
+    .padding {
+        padding-top: 1;
+        padding-bottom: 1;
+        padding-left: 1;
+        padding-right: 1;
+    }
+
+    .align {
+        align-items: center;
+    }
+
+    .justify {
+        justify-content: center;
+    }
+
     code {
         font-size: 20px;
         color: brown;
@@ -17,698 +71,903 @@
     button {
         width: fit-content;
     }
+
+    .roman {
+        list-style-type: lower-roman;
+    }
+
+    p {
+        text-indent: 50px;
+    }
 </style>
 
-<body style="background-color: antiquewhite;">
-    <div style="display: flex;flex-direction: column;
-    line-height: 1.7;margin: 18px; font-size: larger;">
-
-        <!-- 这是一个注释标签 -->
-        <p><code>!DOCTYPE html</code>
-            用于声明这是一个html文件
-        </p><hr>
-
-        <p><code>a</code>
-            用于指定超链接,后可根据是否有href属性，来增加不同值
-        <ol>
-            <li>如果有href，常用于规定链接的目标 URL，也就是网站地址，
-                <br>举例：<code> a href="http://www.runoob.com/" /a</code>
-                <br>hreflang、media、rel、target 以及 type 属性，<b>必须在href存在时才能用</b>
-                <ul>
-                    <br>
-                    <li>
-                        hreflang，指定网页语言
-                        <br>举例：<code>a <b> hreflang="en"</b> href="http://www.runoob.com/" /a</code>
-                    </li>
-                    <br>
-
-                    <li>
-                        media,用于指定特殊的设备，如打印机、移动设备、电视等，进行优化，规定不同的值，类似于网页的css功能？
-                        <br>举例：<code>a href="/tags/att-a-media.html?output=print"<b> media="print and (resolution:300dpi)"</b>  /a</code>
-                        <br>这里指定了特殊设备 打印机 ，并规定分辨率（resolution）为300。
-                    </li>
-                    <br>
-
-                    <li>rel,用于指定当前文档与被链接文档的关系
-                        <br>举例：如添加外部样式表
-                        <code>a href="style.css"<b> rel="stylesheet"</b>  /a</code>
-                        <br>
-
-                        <ul>
-                            <li>
-                                <code>alternate </code>当前可打印版本
-                            </li>
-                            <li>
-                                <code>start </code>集合中的第一个文档
-                            </li>
-                            <li>
-                                <code>next </code>集合中的下一个文档
-                            </li>
-                            <li>
-                                <code>prev </code>集合中的前一个文档
-                            </li>
-                            <li>
-                                <code>content </code>文档目录
-                            </li>
-                            <li>
-                                <code>index </code>文档索引
-                            </li>
-                            <li>
-                                <code>glossary </code>文档中所用字词的术语表或解释
-                            </li>
-                            <li>
-                                <code>copyright </code>包含版权信息的文档
-                            </li>
-                            <li>
-                                <code>chapter </code>章
-                            </li>
-                            <li>
-                                <code>section </code>节
-                            </li>
-                            <li>
-                                <code>subsection </code>字段
-                            </li>
-                            <li>
-                                <code>appendlx </code>附录
-                            </li>
-                            <li>
-                                <code>help </code>帮助文档
-                            </li>
-                            <li>
-                                <code>nofollow </code>Google 使用 "nofollow"，用于指定 Google 搜索引擎不要跟踪链接。
-                            </li>
-                            <li>
-                                <code>licence </code>许可证，协议？
-                                <code>tag</code>标签
-                                <code>friend </code>合作伙伴？
-                            </li>
-
-                        </ul>
-                        <br>
-                    <li>
-                        target用于规定在何处打开链接
-                        <br>举例：
-                        <code>a href="www.跟楞半倒电视台.com" <b>target="_blank" </b> 在外部打开跟楞半倒电视台
-                        /a</code>
-                        <ul>
-                            <li><code>_blank</code>在外部（跳转外部链接？）</li>
-                            <li><code>_self</code>默认，在相同框架打开被链接文档</li>（下一级？）
-                            <li><code>_parent</code>在 父 框架集 中打开被链接文档。（打开想同级的另一个？）</li>
-                            <li><code>_top</code>在整个窗口中打开被链接文档（不懂555）</li>
-                            <li><code>_framename</code>在指定的框架中打开被链接文档。（不懂555）</li>
-                        </ul>
-                    </li>
-                    <br>
-                    <li>
-                        type用于指定被连接网页的MIME类型
-                        <br>举例：<code>a href="www.跟楞半倒电视台.com" <b>tyoe="text/html"</b></code>
-                        <br>告诉浏览器该地址是文字/html文件
-                        <br>MIME就是文件的后缀名，如.jpg、.png、.zip等
-                    </li>
-            </li>
-
-            </ul>
-            </li>
-            <br>
-
-            <li>其余属性用于指定href链接的作用
-                <ul>
-                    <li>
-                        <code>download</code>用于指定下载链接地址
-                        <br>举例：<a
-                            href="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMvNFpQXUf6CdR20ufF9NMgvrgIKR18wACyCcAAismCFbm1NM9rIE_EzYE.png.png"
-                            download="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMvNFpQXUf6CdR20ufF9NMgvrgIKR18wACyCcAAismCFbm1NM9rIE_EzYE.png.png">
-                            ciallow
-                            <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMvNFpQXUf6CdR20ufF9NMgvrgIKR18wACyCcAAismCFbm1NM9rIE_EzYE.png"
-                                alt="杂鱼杂鱼" width="150" height="150">
-                        </a>
-                        <p>将图片放置于A标签内，也可以点击下载</p>
-
-                    </li>
-                </ul>
-            </li>
-        </ol>
-        </p>
-        <br>
-
-    </div><hr>
-
-    <div style="display: flex;flex-direction: column;
-    line-height: 1.7;margin: 18px; font-size: larger;">
-        <p><code>abbr </code>标签用来表示一个缩写词或者首字母缩略词
-            <br>当鼠标放上去后会出现titter标签的内容用来解释缩写
-            <br>举例：我正在学习<abbr title="超文本标记语言">html</abbr>中各种各样的标签
-        </p>
-
-        <p><code>address</code>标签定义文档作者/所有者的联系信息。
-            <br>举例：
-        <address>此笔记由<a href="mailto:nianfeng51@126.com">nianfeng51</a>制作</address>
-        其中mailto用于链接邮箱
-        </p>
-
-        <!-- 这是一个用于确定图片中具体坐标coords的工具 -->
-        <div>
-            <style>
-                #coordTip {
-                    position: fixed;
-                    background: #000;
-                    color: #fff;
-                    padding: 4px 8px;
-                    border-radius: 4px;
-                    font-size: 12px;
-                    pointer-events: none;
-                    display: none;
-                }
-
-                img {
-                    border: 1px solid #ccc;
-                }
-            </style>
-
-            <h3>鼠标移到图片上查看坐标 (原点在左上角)</h3>
-            <!-- 替换成你的目标图片链接 -->
-            <img id="targetImg" src="https://i-1.7k8k.com/2024/0108/08d73ff13a7847288970f14e5605d4e6.jpg" height="150px"
-                alt="待拾取坐标的图片">
-            <div id="coordTip"></div>
-
-            <script>
-                const img = document.getElementById('targetImg');
-                const tip = document.getElementById('coordTip');
-
-                img.addEventListener('mousemove', (e) => {
-                    // 获取鼠标在图片内的相对坐标
-                    const rect = img.getBoundingClientRect();
-                    const x = Math.round(e.clientX - rect.left);
-                    const y = Math.round(e.clientY - rect.top);
-                    // 显示坐标提示
-                    tip.style.display = 'block';
-                    tip.style.left = `${e.clientX + 10}px`;
-                    tip.style.top = `${e.clientY + 10}px`;
-                    tip.innerText = `X: ${x}, Y: ${y}`;
-                });
-
-                img.addEventListener('mouseleave', () => {
-                    tip.style.display = 'none';
-                });
-            </script>
-
-        </div>
-
-
-        <p>
-            <code>area</code> 标签用于在一张img中划定出几个范围用于链接
-            <br>嵌套于<code>map</code>标签内
-            <br>举例：
-            <img src="https://i-1.7k8k.com/2024/0108/08d73ff13a7847288970f14e5605d4e6.jpg" alt="千恋万花" height="150"
-                usemap="#4399">
-            <map name="4399">
-                <area shape="circle" coords="40,48,20"
-                    href="https://ts1.tc.mm.bing.net/th/id/R-C.b8b848f28fde619141df12eb2c0375e2?rik=isRLJXDwe5oaUg&riu=http%3a%2f%2fc-ssl.duitang.com%2fuploads%2fitem%2f201710%2f01%2f20171001143554_eSac5.jpeg&ehk=Zmep6feE3yIL9f5fFyP%2bANzRS5bJjcZqAtaHYjd12v0%3d&risl=&pid=ImgRaw&r=0"
-                    alt="朝武芳乃">
-                <area shape="circle" coords="85,50,15"
-                    href="https://ts4.tc.mm.bing.net/th/id/OIP-C.ViHdKIswvB5VdzwFML7Q-AHaJl?pid=ImgDet&w=474&h=613&rs=1&o=7&rm=3"
-                    alt="常陆茉子">
-                <area shape="circle" coords="132,52,20 "
-                    href="https://pic2.zhimg.com/v2-399aebb3740e23b71b7497d1b149da09_r.jpg" alt="丛雨">
-                <area shape="circle" coords="180,60,20 " href="https://yxlzls.yxbao.com/game/201610/09/51c7a174c4.jpg"
-                    alt="鞍马小春">
-                <area shape="circle" coords="226,41,20 "
-                    href="https://pic2.zhimg.com/v2-f6b7b0215fdca54e50ddf1def4919312_r.jpg" alt="蕾娜">
-            </map>
-            <br>点击以上图片中任务的头部可跳转外部图片，可惜没有芦花姐
-        </p>
-        <br>
-        <p><code>
-            article </code>用于将内容独立于文章之外
-            <br>举例：
-        <article>
-            article的内容与文章无关，用于存放评论、文章故事等
-            <br>标签定义的内容本身必须是有意义的且必须是独立于文档的其余部分。
-        </article>
-        </p>
-        <p>
-            <code>aside</code>标签用于定义artice外的内容（用于侧边栏）（aside的内容应该与附近相关，对附近内容进行解释）
-            <br>举例：
-        <p>My family and I visited The Epcot center this summer.</p>
-        <aside>
-            <h4>Epcot Center</h4>
-            <p>The Epcot Center is a theme park in Disney World, Florida.</p>
-        </aside>举例中aside就对上文p标签中Epcot Center进行了说明
-        </p>
-        <br>
-        <p><code>audio</code>标签用于定义音频，目前仅支持Mp3、Wav、Ogg三种形式
-            <br>举例：
-            <audio controls>
-                <source
-                    src="https://raw.githubusercontent.com/nianfeng5151/nianfeng51box/e862998d3147b2fa8239acffcb9dd8447e4355d1/zayu.mp3">
-            </audio>
-            <br>contrlos用于添加控制面板，直接复制的地址不可用，需要转换为raw链接
-            <br>audio 后可加属性，使音乐循环或停止播放等
-        <ol>
-            <li>autoplay,音乐准备就绪后立刻播放</li>
-            <li>contrlos用于添加控制面板，</li>
-            <li>loop,音乐结束后循环播放</li>
-            <li>muted,静音</li>
-            <li>preload auto/metadata/none ,规定当网页加载时，音频是否默认被加载以及如何被加载。</li>
-        </ol>
-        </p>
-        <br>
-        <p> <code>b</code> <b>加粗文本</b></p>
-        <br>
-        <p><code>base</code> 设置页面中所有<b>相对链接</b>的默认URL或默认目标，必须放在head标签内，一个页面只能有一个base
-            <br>举例：<code> head base href="www.跟楞半倒电视台.com" target="_blank"  </code>
-            <br>这里设置了base跳转外部链接，之后的所有www.跟楞半倒电视台.com连接即使不添加target="_blank属性也会自动跳转至外部，target属性a标签
-        </p>
-        <br>
-        <p><code>bdo</code>用于覆盖文本默认反方向
-        <p>该文本从左到右排列</p>
-        <p><bdo dir="rtl">该文本从左到右排列</bdo></p>
-        </p><br>
-
-        <p><code>blockquote</code>用于定义标注出该内容来自于外部，相当于写出作品出处，非自制</p><br>
-        <p><code>q</code>用于较短的引用,表现出来是个双引号</p>
-        <p>举例：
-        <h1>关于html</h1>
-        <p>以下是来自于菜鸟教程的一段话</p>
-        <blockquote cite="https://www.runoob.com/html/html-tutorial.html">超文本标记语言（英语：HyperText Markup
-            Language，简称：HTML）是一种用于创建网页的标准标记语言。
-
-            您可以使用 HTML 来建立自己的 WEB 站点，HTML 运行在浏览器上，由浏览器来解析。
-
-            在本教程中，您将学习如何使用 HTML 来创建站点。
-
-            HTML 很容易学习！相信您能很快学会它！</blockquote><br>
-
-        <p>以下是菜鸟教程中关于blockquote教程中一位同志的笔记</p>
-        <blockquote cite="https://www.runoob.com/tags/tag-blockquote.html">
-            blockquote元素中一般嵌套p元素，用于标记被引用的文本，这些引用文本并不是直接位于blockquote元素中。
-            如果引文来自在线资源（包括自己网站中的其他地方），那么可以在blockquote标签的cite（引用）属性中指明原始来源的URL。
-            通常浏览器会把blockquote元素呈现为一段左右两侧缩进(40px)的文本。</blockquote>
-            爱意斯坦曾说<q>E=mc²</q>
-        </p><br>
-
-        <p><code>button</code>定义一个按钮</p><br>
-        有非常多的属性，涉及服务器等，看两个以后再学：<br>
-        <ol>
-            <li><code>autofocus</code>页面加载时按钮自动获得焦点<button type="button" autofocus>点我</button><br></li>
-            <br>
-            <li><code>disabled</code> 禁用按钮<button type="button" disabled>点我</button></li>
-            <br>
-            <li><code>form</code>位于表格之外的按钮，（仍属于表格，用id选择）
-                <form action="demo-form.php" method="get" id="nameform">
-                    First name: <input type="text" name="fname" /><br>
-                    Last name: <input type="text" name="lname" /><br>
-                </form>
-
-                <p>下面的按钮是在表单元素外,但仍是表单的一部分。</p>
-
-                <button type="submit" form="nameform" value="提交">点我</button><br>
-            </li>
-            <br>
-            <li><code>name</code>规定按钮的名称，<br>
-                <br>下面两个按钮name相同，但在单击按钮时提交的 值 不同
-                <button name="subject" type="submit" value="HTML">HTML</button>
-                <button name="subject" type="submit" value="CSS">CSS</button><br>
-            </li>
-            <br>
-            <li> <code>type</code>规定按钮的类型<br>
-                <button type="button">button 该按钮是可点击的按钮</button>
-                <button type="submit">submit 该按钮是提交按钮</button>
-                <button type="reset"> reser 该按钮是重置按钮</button>（清除表单数据）<br>
-            </li>
-            <br>
-            <li><code>value</code>规定按钮的初始值（可用脚本更改）</li>
-        </ol><br>
-
-        <p><code>canvas</code>通过脚本（通常是 JavaScript）来绘制图形（比如图表和其他图像）,先了解</p>
-
-        <p><code>caption</code>定义表格的标题<br>
-            <code>table</code>表格，<code>tr</code>行，<code>th</code>列
-            <br><code>colgroup</code> 与<code>col</code>用于对表格中的列进行组合，以便对其进行格式化。
-
-            通过使用 <colgroup>
-                标签，可以向整个列应用样式，而不需要重复为每个单元格或每一行设置样式。col用于在colgroup中的列进行修改<b>必须在table之后，在caption之后</b>span在这里用于选取了3列
-
-
-                <table border="1">
-                    <caption>(caption)一天的时间分配</caption>
-                    <colgroup>
-                        <col span="3" style="background-color: rgb(237, 214, 151);">
-                        <col style="background-color: #e4ad6e;">
-
-                    </colgroup>
-                    <tr>
-                        <th>吃饭</th>
-                        <th>睡觉</th>
-                        <th>打游戏</th>
-                        <th>学习</th>
-                    </tr>
-                    <tr>
-                        <th>5%</th>
-                        <th>50%</th>
-                        <th>35%</th>
-                        <th>10%</th>
-                    </tr>
-                </table>
-        </p>
-
-        <p><code>cite</code>
-            定义作品名称的标题
-            <br><img
-                src="https://github.com/xueli142/CatFather/blob/0c591132edac51ec66d649f9a4f5ac19fe3d9b0b/src/main/resources/static/vue-demo1/src/assets/%E5%86%9B%E4%BA%8B%E8%80%84%E8%80%8B/%E5%86%9B%E4%BA%8B%E8%80%84%E8%80%8B%20(12).png?raw=true"
-                alt="哈基米">
-            <br>这个 <cite>耄耋军事哈基米</cite> 来源于b站up狐萝卜与冰糖雪狸
-
-        <p><code>datalist</code>用来为规定了 input 元素可能的选项列表。<br>
-            被用来在为 input>元素提供"自动完成"的特性。用户能看到一个下拉列表，里边的选项是预先定义好的，将作为用户的输入数据。<br>
-            使用 input 元素的 list 属性来绑定 datalist>元素。</p>(类似于在浏览器输入“哈”时，会自动跳出“哈基米、南北绿豆”等供你选择)
-        <br>
-
-        <p><code>input</code>
-            规定一个用户可以输入数据的字段（框框），输入的数据取决于type，有点多，具体在后续实操课中再搜索。input 元素在 form 元素中使用，用来声明允许用户输入数据的 input 控件。
-            <br>举例：
-            你的名字
-        <form action="demo-form.php" method="get">
-            <input list="browsers" name="browser">
-            <datalist id="browsers">
-                <option value="二狗">
-                <option value="铁蛋">
-                <option value="黑妞">
-                <option value="剩子">
-            </datalist>
-            <input type="submit">
-        </form>
-        </p>
-        <br>
-        <p><code>dl</code>定义一个描述列表<br>
-            <code>dt</code>项目名字<br>
-            <code>dd</code>用来对描述列表中的项目/名字进行描述。在 <dd> 标签内，您能放置段落、换行、图片、链接、列表等等
-                <dl>
-                    <dt>哈基米</dt>
-                    <dd>会对人哈气的基米</dd>
-                    <dt>坤</dt>
-                    <dd>
-                        <audio controls>
-                            <source
-                                src="MP3/niganma.mp3">
-                        </audio>
-                    </dd>
-                </dl>
-
-        </p><br>
-
-        <p><code>del</code>删除文本<code>ins</code>新增文本
-        <p><del cite="del_demo_cite.htm" datetime="2025年12月28日21:18:04">删除的文本可以规定原因和时间</del><ins cite="ins_demo_cite.htm" datetime="2025年12月28日23:19:39">新增的也可以窝</ins></p>
-        </p><br>
-
-        <p>
-            <code>fieldset</code>将表单内的相关元素分组,并且还会附带边框<br>
-            举例：<form ><fieldset disabled><fieldset name="个人信息表格">
-                    姓名：<input type="text"><br>
-                    爱好：<input type="text"><br>
-                    生日：<input type="text">
-                </fieldset>带有disable的表格会被禁用</fieldset>
-            </form>
-            
-            <form>
-                <fieldset name="个人信息表格">
-                    姓名：<input type="text"><br>
-                    爱好：<input type="text"><br>
-                    生日：<input type="text">
-                </fieldset>
-            </form>
-        </p><br>
-
-        <p>
-            <code>figure </code>规定独立的<abbr title="删除后文本还会自动排版，不影响格式">流内容</abbr>（图像、图表、照片、代码等等）<br>
-            <code>figcaption</code>为figure规定一个标题<br>
-            举例：<p>
-                柚子社（ゆずソフト，Yuzu-Soft）是日本一家美少女游戏制作公司，现为Junos Co., Ltd.旗下品牌，前身为同人社团TEAM-EXODUS，原属Visual Art's旗下Studio Mebius成员，曾参与《SNOW》制作 [11] [13] [28]。截至2023年6月共发售12部作品（不含子品牌），下设全年龄向子品牌YUZUSOFTSOUR [1] [14]。
-            </p>
-            <figure>
-                <img src="https://img1.baidu.com/it/u=1186653724,380867064&fm=253&app=138&f=JPEG?w=806&h=800" alt="柚子社" height="150">
-                <figcaption>图中登场的是柚子社旗下作品《天使嚣嚣》中的女角色“谷风天音”</figcaption>
-            </figure>
-        </p><br>
-
-        <p>
-            <code>form</code>用于给用户提供一个可供输入的html表单
-        </p>
-
-        <p><code>footer</code>页脚，<code>header</code> 页头，<code>address</code>作者联系方式</p><br>
-
-        <p>
-            <code>hgroup</code>当标题有多个分组（副标题）时，用于给标题分组<br>
-            <hgroup>
-                <h1>镇惊！</h1>
-                <h2>母猪半夜频频惨叫</h2>
-                <h2>八旬老太内衣失窃</h2>
-                <h3>这究竟是人性的扭曲，还是道德的沦丧</h3>
-                <h1>敬请收看今晚的《法治掉线》</h1>
-            </hgroup>
-            <p>近日，电视台接到多名热心网友举报.....</p>
-        </p><br>
-
-        <p><code>hr</code>分割线</p><hr>
-
-        <p><code>iframe</code>定义一个内联框架<br>
-        举例：<iframe src="https://www.bilibili.com/video/BV12S4y1m7GR/?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click&vd_source=7bde84c72ea7b9a83b707726b3024ae5" >nide</iframe>
-        </p><br>
-
-        <p>
-            <code>label</code>input的控件，使文本可供点击<br>
-            <!-- action规定提交表单时向何处发送，后面接你的服务器 -->
-            举例：<form action="demo_form.php">
-                <!-- name的作用是分组必须加且相同，这样才能互斥，否则只能点击不能取消 -->
-                <fieldset >
-                    <legend>最喜欢的水果</legend>
-                    
-                      <label for="caomei">草莓</label>
-                    <input type="radio"  id="caomei" value="caomei" name="shuiguo"><br>
-
-                    <label for="mangguo">芒果</label>
-                    <input type="radio" id="mangguo" value="mangguo" name="shuiguo"><br>
-
-                    <label for="youzi">柚子</label>
-                    <input type="radio" id="youzi" value="youzi" name="shuiguo"><br>
-                    
-                    <input type="submit" value="提交">
-                   
-                </fieldset>
-            </form>
-        </p><br>
-
-        <p>
-            <code>link</code>用于定义与<b>外部资源</b>的关系，常见的如外部样式表<br>
-            link为空属性，必须放在head部<br>
-            举例：link href="外部资源链接" rel="外部资源链接与文档的关系（必须！）" type="规定被链接文档的 MIME 类型,后缀名" hreflang="指定文档的语言" media="文档链接的设备类型"
-            
-        </p><br>
-
-        <p>
-            <code>mate</code>描述文档的元数据，可以被浏览器解析，包含：指定网页的描述，关键词，文件的最后修改时间，作者及其他元数据<br>
-            mate=charset="UTF-8" <br> 
-            meta name="viewport" content="width=device-width, initial-scale=1.0"(分组：视觉效果，内容：宽度=屏幕宽度，字母比例=1.0)<br>
-            meta name="kingwords" content="HTML Tag Practice"<br>
-            meta name="author" content="nianfeng51"<br>
-        </p>
-
-        <p>
-            <code>meter</code>用于规定度量衡，如显示磁盘容量，内存使用情况等，做进度条用progress<br>
-            value规定度量的当前值，min最小值，max最大值，optimunm最优值，high最高值范围，low最低值范围
-            <meter value="2" min="0" max="10">2 out of 10</meter><br>
-            <meter value="0.8">80%</meter>
-        </p><br>
-
-        <p>
-            <code>nav</code>用来定义导航<br>
-            <nav>
-                <a href="https://www.bilibili.com/">bilibili<br>
-                    <img src="https://pica.zhimg.com/v2-27358bcc294e9e9a751fccb040676420_720w.jpg?source=172ae18b" alt="bilibili" height="100">
-                </a><br>
-                <a href="https://www.runoob.com/">菜鸟教程<br>
-                <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C._xL29_Tkaqa1lqbmMMg8LQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3" alt="菜鸟教程" height="100"></a>
-            </nav>
-        </p><br>
-
-        <p><code>noscript</code>定义在脚本未被执行时的替代内容（文本）相当于img的alt<br>
-        <script>
-            document.write("ciallow world")
-        </script>
-        <noscript>杂鱼，你的浏览器不支持JavaScript</noscript></p>
-
-        <p>
-            <code>object</code>用来嵌入对象，比如图像、音频、视频、Java applets、ActiveX、PDF 以及 Flash。<br>
-            <object data="https://github.com/nianfeng5151/nianfeng51box/blob/652f31d3753efcd1bb861c1fe7d7628831e2fb87/%E5%B8%85.jpg?raw=true" type="image/jpg"></object>
-            <!-- type=“文件类型/MME格式” -->
-        </p>
-
-        <p><code>optgroup</code>用来给相关标签分组<br>
-            <code>option</code>定义下拉列表中的一个选项（一个条目），用于select和datalist,带有selected的option为没被点开始的默认选项<br>
-        <select >
-            <optgroup label="fruits">
-                <option value="caomei">草莓</option>
-                <option value="mangguo">芒果</option>
-                <option value="pingguo">苹果</option>
-            </optgroup>
-            <optgroup label="vagetable">
-                <option value="baicai">白菜</option>
-                <option value="yangyu">洋芋</option>
-            </optgroup>
-        </select>
-        </p><br>
-
-        <p>
-            <code>output</code>计算结果输出显示<br>
-            <code>param</code>允许您为插入 XHTML 文档的对象规定 run-time 设置，也就是说，此标签可为包含它的 object 或者 applet 标签提供参数。<br>
-
-        </p><br>
-
-        <p>
-            <code>picture</code> 元素允许我们在不同的设备上显示不同的图片，一般用于响应式。<br>
-            <picture>
-                <source media="(min-width: 800px)" srcset="https://so1.360tres.com/t01900439c6c79694db.jpg" >
-                <source media="(min-width: 600px)" srcset="https://ts4.tc.mm.bing.net/th/id/OIP-C.LKp267CoUMLVU74C14OB6AHaHT?rs=1&pid=ImgDetMain&o=7&rm=3">
-
-                <img src="https://ts4.tc.mm.bing.net/th/id/OIP-C.ViHdKIswvB5VdzwFML7Q-AHaJl?pid=ImgDet&w=474&h=613&rs=1&o=7&rm=3"
-                width="400">
-            </picture>
-        </p><br>
-
-        <p>
-            <code>progress</code>定义当前下载进度<br>
-            <progress value="84" max="100"></progress>
-        </p><br>
-
-        <p>
-            <code>ruby</code>定义 ruby 注释（中文注音或字符）<br>
-            <code>rt</code>义字符（中文注音或字符）的解释或发音。<br>
-            <code>rp</code>  ruby 注释中使用，以定义不支持 ruby 元素的浏览器所显示的内容。<br>
-            <ruby>
-                千 <rp>(</rp><rt>qian</rt><rp>)</rp>
-                恋 <rp>(</rp><rt>lian</rt><rp>)</rp>
-                万 <rp>(</rp><rt>wan</rt><rp>)</rp>
-                花 <rp>(</rp><rt>hua</rt><rp>)</rp>
-            </ruby>
-        </p><br>
-
-        <p>
-            <code>s</code>用来标注没用的、不正确、不准确的文本，<br>
-            如果是删除的、替换的文本用del标注<br>
-            导师：<s>你的实验数据复现不出来</s><br>
-            导师：<del>重新做实验</del><ins>延毕吧！</ins>
-        </p><br>
-
-        <p>
-            <code>section</code>定义了文档的某个区域。比如章节、头部、底部或者文档的其他区域<br>
-            与div的区别在于div是一个空容器，方便设置布局；<br>
-            section用于文章内部，可以被浏览器检索，专用于标识文档中独立、有主题的内容区域，需搭配标题使用；
-        </p><br>
-
-        <p>
-            <code>source</code>为媒体元素（比如 video和 audio）定义媒体资源。允许您规定两个视频/音频文件供浏览器根据它对媒体类型或者编解码器的支持进行选择<br>
-            <audio controls>
-                <source src="鸟叫.mp3" type="audio/mp3">
-                <source src="鸟叫.ogg" type="audio/ogg">
-            </audio>
-        </p><br>
-
-        <p>
-            <code>span</code>用于对文档中的行内元素进行组合。对文档内容进行css？
-            <br>我的猫是<span style="color: #e4ad6e;">黄色</span>的,我的衣服是<span style="color: rgb(10, 125, 125);">蓝色</span>的
-        </p><br>
-
-        <p>
-            <code>table</code>定义一个表格<br>
-            <code>tr</code>定义单元行<br>
-            表头单元格 - 包含头部信息（由 th 创建<br>
-            标准单元格 - 包含数据（由 td 元素创建）<br>
-            th 元素中的文本通常呈现为粗体并且居中。<br>
-            td 元素中的文本通常是普通的左对齐文本。<br>
-            thead、tbody、tfoot,出现在 caption、colgroup之后
-            <br>thead、tbody、tfoot的存在可以在打印长篇文章时都有thead、tfoot的内容
-
-            <table border="1">
-                <caption>年收入</caption>
-
-                <colgroup>
-                <col style="background-color: #e4ad6e;">
-                <col span="2" style="background-color: #50d26e;">
-                </colgroup>
-
-                <thead>
-                    <tr>
-                        <th>月份</th>
-                        <th>收入</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>上半年</th>
-                        <th>60</th>
-                    </tr>
-                    <tr>
-                        <th>下半年</th>
-                        <th>50</th>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th>总结</th>
-                        <th>110</th>
-                    </tr>
-                </tfoot>
-            </table>
-        </p><br>
-
-        <p>
-            <code>textarea</code>规定一个可输入内容的文本框<br>
-            <textarea cols="30" rows="4" placeholder="nihao"   wrap="hard">
-
-            </textarea>
-        </p><br>
-
-        <p>
-            <code>template</code>用于隐藏一些内容,后续用JavaScript互动点开
-            
-        </p><br>
-
-        <p>
-            <code>time</code>定义公历的时间（24 小时制）或日期，时间和时区偏移是可选的。<br>
-            被机器识别后可用于日程提醒操作、浏览器方便搜索等操作<br>
-            <p>我将在<time datetime="2026-06-01">儿童节</time>买个冰棒吃</p>
-        </p><br>
-
-        <p>
-            <code>video</code>定义视频<br>
-            <code>track</code>为视频添加字幕
-            <video controls src="video/blender.blacklong.mp4">
-                <track 暂时没有>
-            </video>
-        </p><br>
-
-        <p>
-            <code>wbr</code>规定了在何处实行换行<br>
-            <p>尝试缩小浏览器窗口，以下段落的 "XMLHttpRequest" 单词会被分行：</p>
-
-            <p>学习 AJAX ,您必须熟悉 <wbr>Http<wbr>Request 对象。</p>
-        </p><br>
-
-        <img scr="img/shuai.jpg" alt="我真帅">
-
-
-
-
-
-
-
-
-
-
-
+<body class="flex column">
+    <!-- 顶部导航栏 -->
+    <div class="padding flex column zongse" style="
+        height: 100px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      ">
+
+        <h1>我的html tage 练习笔记</h1>
 
     </div>
 
+    <!-- 内容区 -->
+    <div class="flex column flex1 align ">
+
+        <!-- a标签 -->
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+
+            <h1>a开头标签</h1><br>
+            <p><code>a</code>用于指定超链接,后可根据是否有href属性，来增加不同值</p><br>
+            <ol class="roman">
+                <li>
+                    <ol>
+                        <li>如果有href，常用于规定链接的目标 URL，也就是网站地址，
+                            <br>举例：<code> a href="http://www.runoob.com/" /a</code>
+                            <br>hreflang、media、rel、target 以及 type 属性，<b>必须在href存在时才能用</b>
+                            <ul>
+                                <br>
+                                <li>
+                                    hreflang，指定网页语言
+                                    <br>举例：<code>a <b> hreflang="en"</b> href="http://www.runoob.com/" /a</code>
+                                </li>
+                                <br>
+
+                                <li>
+                                    media,用于指定特殊的设备，如打印机、移动设备、电视等，进行优化，规定不同的值，类似于网页的css功能？
+                                    <br>举例：<code>a href="/tags/att-a-media.html?output=print"<b> media="print and (resolution:300dpi)"</b>  /a</code>
+                                    <br>这里指定了特殊设备 打印机 ，并规定分辨率（resolution）为300。
+                                </li>
+                                <br>
+
+                                <li>rel,用于指定当前文档与被链接文档的关系
+                                    <br>举例：如添加外部样式表
+                                    <code>a href="style.css"<b> rel="stylesheet"</b>  /a</code>
+                                    <br>
+
+                                    <ul>
+                                        <li>
+                                            <code>alternate </code>当前可打印版本
+                                        </li>
+                                        <li>
+                                            <code>start </code>集合中的第一个文档
+                                        </li>
+                                        <li>
+                                            <code>next </code>集合中的下一个文档
+                                        </li>
+                                        <li>
+                                            <code>prev </code>集合中的前一个文档
+                                        </li>
+                                        <li>
+                                            <code>content </code>文档目录
+                                        </li>
+                                        <li>
+                                            <code>index </code>文档索引
+                                        </li>
+                                        <li>
+                                            <code>glossary </code>文档中所用字词的术语表或解释
+                                        </li>
+                                        <li>
+                                            <code>copyright </code>包含版权信息的文档
+                                        </li>
+                                        <li>
+                                            <code>chapter </code>章
+                                        </li>
+                                        <li>
+                                            <code>section </code>节
+                                        </li>
+                                        <li>
+                                            <code>subsection </code>字段
+                                        </li>
+                                        <li>
+                                            <code>appendlx </code>附录
+                                        </li>
+                                        <li>
+                                            <code>help </code>帮助文档
+                                        </li>
+                                        <li>
+                                            <code>nofollow </code>Google 使用 "nofollow"，用于指定 Google 搜索引擎不要跟踪链接。
+                                        </li>
+                                        <li>
+                                            <code>licence </code>许可证，协议？
+                                            <code>tag</code>标签
+                                            <code>friend </code>合作伙伴？
+                                        </li>
+
+                                    </ul>
+                                    <br>
+                                <li>
+                                    target用于规定在何处打开链接
+                                    <br>举例：
+                                    <code>a href="www.跟楞半倒电视台.com" <b>target="_blank" </b> 在外部打开跟楞半倒电视台
+                        /a</code>
+                                    <ul>
+                                        <li><code>_blank</code>在外部（跳转外部链接？）</li>
+                                        <li><code>_self</code>默认，在相同框架打开被链接文档</li>（下一级？）
+                                        <li><code>_parent</code>在 父 框架集 中打开被链接文档。（打开想同级的另一个？）</li>
+                                        <li><code>_top</code>在整个窗口中打开被链接文档（不懂555）</li>
+                                        <li><code>_framename</code>在指定的框架中打开被链接文档。（不懂555）</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    type用于指定被连接网页的MIME类型
+                                    <br>举例：<code>a href="www.跟楞半倒电视台.com" <b>tyoe="text/html"</b></code>
+                                    <br>告诉浏览器该地址是文字/html文件
+                                    <br>MIME就是文件的后缀名，如.jpg、.png、.zip等
+                                </li>
+                        </li>
+                        </ul>
+                </li>
+            </ol>
+            </li>
+
+            <li>
+                <p><code>abbr </code>标签用来表示一个缩写词或者首字母缩略词
+                    <br>当鼠标放上去后会出现titter标签的内容用来解释缩写
+                    <br>举例：我正在学习<abbr title="超文本标记语言">html</abbr>中各种各样的标签
+                </p><br>
+            </li>
+
+            <li>
+                <!-- 这是一个用于确定图片中具体坐标coords的工具 -->
+                <div>
+                    <style>
+                        #coordTip {
+                            position: fixed;
+                            background: #000;
+                            color: #fff;
+                            padding: 4px 8px;
+                            border-radius: 4px;
+                            font-size: 12px;
+                            pointer-events: none;
+                            display: none;
+                        }
+
+                        img {
+                            border: 1px solid #ccc;
+                        }
+                    </style>
+
+                    <h3>这是一个确定图片坐标的工具，鼠标移到图片上查看坐标 (原点在左上角)</h3>
+                    <!-- 替换成你的目标图片链接 -->
+                    <img id="targetImg" src="https://i-1.7k8k.com/2024/0108/08d73ff13a7847288970f14e5605d4e6.jpg"
+                        height="150px" alt="待拾取坐标的图片">
+                    <div id="coordTip"></div>
+
+                    <script>
+                        const img = document.getElementById('targetImg');
+                        const tip = document.getElementById('coordTip');
+
+                        img.addEventListener('mousemove', (e) => {
+                            // 获取鼠标在图片内的相对坐标
+                            const rect = img.getBoundingClientRect();
+                            const x = Math.round(e.clientX - rect.left);
+                            const y = Math.round(e.clientY - rect.top);
+                            // 显示坐标提示
+                            tip.style.display = 'block';
+                            tip.style.left = `${e.clientX + 10}px`;
+                            tip.style.top = `${e.clientY + 10}px`;
+                            tip.innerText = `X: ${x}, Y: ${y}`;
+                        });
+
+                        img.addEventListener('mouseleave', () => {
+                            tip.style.display = 'none';
+                        });
+                    </script>
+                </div>
+                <p>
+                    <code>area</code> 标签用于在一张img中划定出几个范围用于链接
+                    <br>嵌套于<code>map</code>标签内
+                    <br>举例：
+                    <img src="https://i-1.7k8k.com/2024/0108/08d73ff13a7847288970f14e5605d4e6.jpg" alt="千恋万花"
+                        height="150" usemap="#4399">
+                    <map name="4399">
+                        <area shape="circle" coords="40,48,20"
+                            href="https://ts1.tc.mm.bing.net/th/id/R-C.b8b848f28fde619141df12eb2c0375e2?rik=isRLJXDwe5oaUg&riu=http%3a%2f%2fc-ssl.duitang.com%2fuploads%2fitem%2f201710%2f01%2f20171001143554_eSac5.jpeg&ehk=Zmep6feE3yIL9f5fFyP%2bANzRS5bJjcZqAtaHYjd12v0%3d&risl=&pid=ImgRaw&r=0"
+                            alt="朝武芳乃">
+                        <area shape="circle" coords="85,50,15"
+                            href="https://ts4.tc.mm.bing.net/th/id/OIP-C.ViHdKIswvB5VdzwFML7Q-AHaJl?pid=ImgDet&w=474&h=613&rs=1&o=7&rm=3"
+                            alt="常陆茉子">
+                        <area shape="circle" coords="132,52,20 "
+                            href="https://pic2.zhimg.com/v2-399aebb3740e23b71b7497d1b149da09_r.jpg" alt="丛雨">
+                        <area shape="circle" coords="180,60,20 "
+                            href="https://yxlzls.yxbao.com/game/201610/09/51c7a174c4.jpg" alt="鞍马小春">
+                        <area shape="circle" coords="226,41,20 "
+                            href="https://pic2.zhimg.com/v2-f6b7b0215fdca54e50ddf1def4919312_r.jpg" alt="蕾娜">
+                    </map>
+                    <br>点击以上图片中任务的头部可跳转外部图片，可惜没有芦花姐
+                </p>
+            </li>
+
+            <li>
+                <p><code>article </code>用于将内容独立于文章之外
+                    <br>举例：
+                <article>
+                    article的内容与文章无关，用于存放评论、文章故事等
+                    <br>标签定义的内容本身必须是有意义的且必须是独立于文档的其余部分。
+                </article>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                    <code>aside</code>标签用于定义artice外的内容（用于侧边栏）（aside的内容应该与附近相关，对附近内容进行解释）
+                    <br>举例：
+                <p>My family and I visited The Epcot center this summer.</p>
+                <aside>
+                    <h4>Epcot Center</h4>
+                    <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+                </aside>举例中aside就对上文p标签中Epcot Center进行了说明
+                </p>
+            </li>
+
+            <li>
+                <p><code>audio</code>标签用于定义音频，目前仅支持Mp3、Wav、Ogg三种形式
+                    <br>举例：
+                    <audio controls>
+                        <source
+                            src="https://raw.githubusercontent.com/nianfeng5151/nianfeng51box/e862998d3147b2fa8239acffcb9dd8447e4355d1/zayu.mp3">
+                    </audio>
+                    <br>contrlos用于添加控制面板，直接复制的地址不可用，需要转换为raw链接
+                    <br>audio 后可加属性，使音乐循环或停止播放等
+                <ol>
+                    <li>autoplay,音乐准备就绪后立刻播放</li>
+                    <li>contrlos用于添加控制面板</li>
+                    <li>loop,音乐结束后循环播放</li>
+                    <li>muted,静音</li>
+                    <li>preload auto/metadata/none ,规定当网页加载时，音频是否默认被加载以及如何被加载。</li>
+                </ol>
+                </p>
+            </li>
+
+
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+
+            <h1>b开头的标签</h1>
+            <ol class="roman">
+                <li>
+                    <p> <code>b</code> <b>加粗文本</b></p>
+                    <p><code>base</code> 设置页面中所有<b>相对链接</b>的默认URL或默认目标，必须放在head标签内，一个页面只能有一个base
+                    <p>举例：<code> head base href="www.跟楞半倒电视台.com" target="_blank"  </code>
+                        <br>这里设置了base跳转外部链接，之后的所有www.跟楞半倒电视台.com连接即使不添加target="_blank属性也会自动跳转至外部，target属性a标签
+                    </p>
+                    </p>
+                </li>
+
+                <li>
+                    <p><code>bdo</code>用于覆盖文本默认反方向
+                    <p>该文本从左到右排列</p>
+                    <p><bdo dir="rtl">该文本从左到右排列</bdo></p>
+                    </p>
+                </li>
+
+                <li>
+                    <p><code>blockquote</code>用于定义标注出该内容来自于外部，相当于写出作品出处，非自制</p><br>
+                    <p><code>q</code>用于较短的引用,表现出来是个双引号</p>
+                    <p>举例：
+                    <h1>关于html</h1>
+                    <p>以下是来自于菜鸟教程的一段话</p>
+                    <blockquote cite="https://www.runoob.com/html/html-tutorial.html">超文本标记语言（英语：HyperText Markup
+                        Language，简称：HTML）是一种用于创建网页的标准标记语言。
+
+                        您可以使用 HTML 来建立自己的 WEB 站点，HTML 运行在浏览器上，由浏览器来解析。
+
+                        在本教程中，您将学习如何使用 HTML 来创建站点。
+
+                        HTML 很容易学习！相信您能很快学会它！</blockquote><br>
+
+                    <p>以下是菜鸟教程中关于blockquote教程中一位同志的笔记</p>
+                    <blockquote cite="https://www.runoob.com/tags/tag-blockquote.html">
+                        blockquote元素中一般嵌套p元素，用于标记被引用的文本，这些引用文本并不是直接位于blockquote元素中。
+                        如果引文来自在线资源（包括自己网站中的其他地方），那么可以在blockquote标签的cite（引用）属性中指明原始来源的URL。
+                        通常浏览器会把blockquote元素呈现为一段左右两侧缩进(40px)的文本。</blockquote>
+                    爱意斯坦曾说<q>E=mc²</q>
+                    </p>
+                </li>
+
+                <li>
+                    <p><code>button</code>定义一个按钮<br>
+                        有非常多的属性，涉及服务器等，看两个以后再学：<br>
+                    <ol>
+                        <li><code>autofocus</code>页面加载时按钮自动获得焦点<button type="button" autofocus>点我</button><br></li>
+                        <br>
+                        <li><code>disabled</code> 禁用按钮<button type="button" disabled>点我</button></li>
+                        <br>
+                        <li><code>form</code>位于表格之外的按钮，（仍属于表格，用id选择）
+                            <form action="demo-form.php" method="get" id="nameform">
+                                First name: <input type="text" name="fname" /><br>
+                                Last name: <input type="text" name="lname" /><br>
+                            </form>
+
+                            <p>下面的按钮是在表单元素外,但仍是表单的一部分。</p>
+
+                            <button type="submit" form="nameform" value="提交">点我</button><br>
+                        </li>
+                        <br>
+                        <li><code>name</code>规定按钮的名称，<br>
+                            <br>下面两个按钮name相同，但在单击按钮时提交的 值 不同
+                            <button name="subject" type="submit" value="HTML">HTML</button>
+                            <button name="subject" type="submit" value="CSS">CSS</button><br>
+                        </li>
+                        <br>
+                        <li> <code>type</code>规定按钮的类型<br>
+                            <button type="button">button 该按钮是可点击的按钮</button>
+                            <button type="submit">submit 该按钮是提交按钮</button>
+                            <button type="reset"> reser 该按钮是重置按钮</button>（清除表单数据）<br>
+                        </li>
+                        <br>
+                        <li><code>value</code>规定按钮的初始值（可用脚本更改）</li>
+                    </ol><br>
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>c开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p><code>canvas</code>通过脚本（通常是 JavaScript）来绘制图形（比如图表和其他图像）,先了解</p>
+                </li>
+
+                <li>
+                    <p><code>caption</code>定义表格的标题<br>
+                        <code>table</code>表格，<code>tr</code>行，<code>th</code>列
+                        <br><code>colgroup</code> 与<code>col</code>用于对表格中的列进行组合，以便对其进行格式化。
+
+                        通过使用 colgroup
+                        标签，可以向整个列应用样式，而不需要重复为每个单元格或每一行设置样式。col用于在colgroup中的列进行修改<b>必须在table之后，在caption之后</b>span在这里用于选取了3列
+
+
+                    <table border="1">
+                        <caption>(caption)一天的时间分配</caption>
+                        <colgroup>
+                            <col span="3" style="background-color: rgb(237, 214, 151);">
+                            <col style="background-color: #e4ad6e;">
+
+                        </colgroup>
+                        <tr>
+                            <th>吃饭</th>
+                            <th>睡觉</th>
+                            <th>打游戏</th>
+                            <th>学习</th>
+                        </tr>
+                        <tr>
+                            <th>5%</th>
+                            <th>50%</th>
+                            <th>35%</th>
+                            <th>10%</th>
+                        </tr>
+                    </table>
+                    </p>
+                </li>
+
+                <li>
+                    <p><code>cite</code>
+                        定义作品名称的标题,呈现为斜体
+                        <br><img
+                            src="https://github.com/xueli142/CatFather/blob/0c591132edac51ec66d649f9a4f5ac19fe3d9b0b/src/main/resources/static/vue-demo1/src/assets/%E5%86%9B%E4%BA%8B%E8%80%84%E8%80%8B/%E5%86%9B%E4%BA%8B%E8%80%84%E8%80%8B%20(12).png?raw=true"
+                            alt="哈基米">
+                        <br>这个 <cite>耄耋军事哈基米</cite> 来源于b站up狐萝卜与冰糖雪狸
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>d开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p><code>datalist</code>用来为规定了 input 元素可能的选项列表。<br>
+                        被用来在为 input元素提供"自动完成"的特性。用户能看到一个下拉列表，里边的选项是预先定义好的，将作为用户的输入数据。<br>
+                        使用 input 元素的 list 属性来绑定 datalist元素。(类似于在浏览器输入“哈”时，会自动跳出“哈基米、南北绿豆”等供你选择)
+                        <br>
+                        <code>input</code>
+                        规定一个用户可以输入数据的字段（框框），输入的数据取决于type，有点多，具体在后续实操课中再搜索。input 元素在 form 元素中使用，用来声明允许用户输入数据的 input 控件。
+                        <br>举例：
+                        你的名字
+                    <form action="demo-form.php" method="get">
+                        <input list="browsers" name="browser">
+                        <datalist id="browsers">
+                            <option value="二狗">
+                            <option value="铁蛋">
+                            <option value="黑妞">
+                            <option value="剩子">
+                        </datalist>
+                        <input type="submit">
+                    </form>
+                    </p>
+                </li>
+
+                <li>
+                    <p><code>dl</code>定义一个描述列表<br>
+                        <code>dt</code>项目名字<br>
+                        <code>dd</code>用来对描述列表中的项目/名字进行描述。在 dd 标签内，您能放置段落、换行、图片、链接、列表等等
+                    <dl>
+                        <dt>哈基米</dt>
+                        <dd>会对人哈气的基米</dd>
+                        <dt>坤</dt>
+                        <dd>
+                            <audio controls>
+                                <source
+                                    src="https://raw.githubusercontent.com/nianfeng5151/nianfeng51box/77d0136d3a38c9460c3bb9be2e93e143dd457a2d/niganma.mp3">
+                            </audio>
+                        </dd>
+                    </dl>
+                    </p>
+                </li>
+
+                <li>
+                    <p><code>del</code>删除文本<code>ins</code>新增文本
+                    <p><del cite="删除测试网站" datetime="2025年12月28日21:18:04">删除的文本可以规定原因和时间</del><ins cite="新增测试网站"
+                            datetime="2025年12月28日23:19:39">新增也可以窝</ins></p>
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>f开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p>
+                        <code>fieldset</code>将表单内的相关元素分组,并且还会附带边框<br>
+                        举例：
+                    <form>
+                        <fieldset disabled>
+                            <fieldset name="个人信息表格">
+                                姓名：<input type="text"><br>
+                                爱好：<input type="text"><br>
+                                生日：<input type="text">
+                            </fieldset>带有disable的表格会被禁用
+                        </fieldset>
+                    </form>
+
+                    <form>
+                        <fieldset name="个人信息表格">
+                            姓名：<input type="text"><br>
+                            爱好：<input type="text"><br>
+                            生日：<input type="text">
+                        </fieldset>
+                    </form>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>figure </code>规定独立的<abbr title="删除后文本还会自动排版，不影响格式">流内容</abbr>（图像、图表、照片、代码等等）<br>
+                        <code>figcaption</code>为figure规定一个标题<br>
+                        举例：
+                    <p>
+                        柚子社（ゆずソフト，Yuzu-Soft）是日本一家美少女游戏制作公司，现为Junos Co., Ltd.旗下品牌，前身为同人社团TEAM-EXODUS，原属Visual
+                        Art's旗下Studio
+                        Mebius成员，曾参与《SNOW》制作 [11] [13] [28]。截至2023年6月共发售12部作品（不含子品牌），下设全年龄向子品牌YUZUSOFTSOUR [1] [14]。<br>
+                    <figure>
+                        <img src="https://img1.baidu.com/it/u=1186653724,380867064&fm=253&app=138&f=JPEG?w=806&h=800"
+                            alt="柚子社" height="150">
+                        <figcaption>
+                            图中登场的是柚子社旗下作品《天使嚣嚣》中的女角色“谷风天音”
+                        </figcaption>
+                    </figure><br>
+                    该段文字是测试删除figcaption代码后格式是否不变
+                    </p>
+                    </p>
+                </li>
+
+                <li>
+                    <code>form</code>用于给用户提供一个可供输入的html表单
+                </li>
+
+                <li>
+                    <p><code>footer</code>页脚，<code>header</code> 页头，<code>address</code>作者联系方式</p>
+                </li>
+
+                <li>
+                    <p class="">
+                        <code>hgroup</code>当标题有多个分组（副标题）时，用于给标题分组<br>
+                        <hgroup class="flex column align">
+                            <h1>镇惊！</h1>
+                            <h2>母猪半夜频频惨叫</h2>
+                            <h2>八旬老太内衣失窃</h2>
+                            <h3>这究竟是人性的扭曲，还是道德的沦丧</h3>
+                            <h1>敬请收看今晚的《法治掉线》</h1>
+                        </hgroup>
+                    <p>近日，电视台接到多名热心网友举报.....</p>
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>i开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p><code>iframe</code>定义一个内联框架<br>
+                        举例：<iframe style="width: 700px;height: 300px;"
+                            src="https://www.bilibili.com/video/BV12S4y1m7GR/?spm_id_from=333.1007.top_right_bar_window_default_collection.content.click&vd_source=7bde84c72ea7b9a83b707726b3024ae5">
+                        </iframe>
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>l开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p>
+                        <code>label</code>input的控件，使文本可供点击<br>
+                        <!-- action规定提交表单时向何处发送，后面接你的服务器 -->
+                        举例：
+                    <form action="demo_form.php">
+                        <!-- name的作用是分组必须加且相同，这样才能互斥，否则只能点击不能取消 -->
+                        <fieldset>
+                            <legend>最喜欢的水果</legend>
+
+                            <label for="caomei">草莓</label>
+                            <input type="radio" id="caomei" value="caomei" name="shuiguo"><br>
+
+                            <label for="mangguo">芒果</label>
+                            <input type="radio" id="mangguo" value="mangguo" name="shuiguo"><br>
+
+                            <label for="youzi">柚子</label>
+                            <input type="radio" id="youzi" value="youzi" name="shuiguo"><br>
+
+                            <input type="submit" value="提交">
+
+                        </fieldset>
+                    </form>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>link</code>用于定义与<b>外部资源</b>的关系，常见的如外部样式表<br>
+                        link为空属性，必须放在head部<br>
+                        举例：link href="外部资源链接" rel="外部资源链接与文档的关系（必须！）" type="规定被链接文档的 MIME 类型,后缀名" hreflang="指定文档的语言"
+                        media="文档链接的设备类型"
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>m开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p>
+                        <code>meter</code>用于规定度量衡，如显示磁盘容量，内存使用情况等，做进度条用progress<br>
+                        value规定度量的当前值，min最小值，max最大值，optimunm最优值，high最高值范围，low最低值范围<br>
+                        <meter value="2" min="0" max="10">2 out of 10</meter><br>
+                        <meter value="0.8">80%</meter>
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>n开头标签</h1>
+            <ol class="roman ">
+                <li>
+                    <p>
+                        <code>nav</code>用来定义导航<br>
+                    <nav>
+                        <a href="https://www.bilibili.com/">bilibili<br>
+                            <img src="https://pica.zhimg.com/v2-27358bcc294e9e9a751fccb040676420_720w.jpg?source=172ae18b"
+                                alt="bilibili" height="100">
+                        </a><br>
+                        <a href="https://www.runoob.com/">菜鸟教程<br>
+                            <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C._xL29_Tkaqa1lqbmMMg8LQAAAA?rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="菜鸟教程" height="100"></a>
+                    </nav>
+                    </p>
+                </li>
+
+                <li>
+                    <p><code>noscript</code>定义在脚本未被执行时的替代内容（文本）相当于img的alt<br>
+                        <script>
+                            document.write("ciallow world")
+                        </script>
+                        <noscript>杂鱼，你的浏览器不支持JavaScript</noscript>
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>o开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p class="flex column align">
+                        <code>object</code>用来嵌入对象，比如图像、音频、视频、Java applets、ActiveX、PDF 以及 Flash。<br>
+                        <object
+                            data="https://github.com/nianfeng5151/nianfeng51box/blob/652f31d3753efcd1bb861c1fe7d7628831e2fb87/%E5%B8%85.jpg?raw=true"
+                            type="image/jpg"></object>
+                        <!-- type=“文件类型/MME格式” -->
+                    </p>
+                </li>
+
+                <li>
+                    <p><br>
+                        <code>optgroup</code>用来给相关标签分组<br>
+                        <code>option</code>定义下拉列表中的一个选项（一个条目），用于select和datalist,带有selected的option为没被点开始的默认选项<br>
+                        <select>
+                            <optgroup label="fruits">
+                                <option value="caomei">草莓</option>
+                                <option value="mangguo">芒果</option>
+                                <option value="pingguo">苹果</option>
+                            </optgroup>
+                            <optgroup label="vagetable">
+                                <option value="baicai">白菜</option>
+                                <option value="yangyu">洋芋</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>output</code>计算结果输出显示
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>p开头标签</h1>
+            <ol class="roman">
+                <li>
+
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>p开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p><code>param</code>允许您为插入 XHTML 文档的对象规定 run-time 设置，也就是说，此标签可为包含它的 object 或者 applet 标签提供参数。
+                    </p>
+                </li>
+
+                <li>
+                    <p class="flex column align">
+                        <code>picture</code> 元素允许我们在不同的设备上显示不同的图片，一般用于响应式。<br>
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="https://so1.360tres.com/t01900439c6c79694db.jpg">
+                            <source media="(min-width: 600px)"
+                                srcset="https://ts4.tc.mm.bing.net/th/id/OIP-C.LKp267CoUMLVU74C14OB6AHaHT?rs=1&pid=ImgDetMain&o=7&rm=3">
+
+                            <img src="https://ts4.tc.mm.bing.net/th/id/OIP-C.ViHdKIswvB5VdzwFML7Q-AHaJl?pid=ImgDet&w=474&h=613&rs=1&o=7&rm=3"
+                                width="400">
+                        </picture>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>progress</code>定义当前下载进度<br>
+                        <progress value="84" max="100"></progress>
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>r开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p>
+                        <code>ruby</code>给内容进行注释（中文注音或字符）<br>
+                        <code>rt</code>汉语拼音或其他注释内容。<br>
+                        <code>rp</code> ruby 注释中使用，以定义不支持 ruby 元素的浏览器所显示的内容。<br>
+                        <ruby>
+                            千 <rp>(</rp>
+                            <rt>qian</rt>
+                            <rp>)</rp>
+
+                            恋 <rp>(</rp>
+                            <rt>lian</rt>
+                            <rp>)</rp>
+
+                            万 <rp>(</rp>
+                            <rt>wan</rt>
+                            <rp>)</rp>
+
+                            花 <rp>(</rp>
+                            <rt>hua</rt>
+                            <rp>)</rp>
+                        </ruby>
+                    </p>
+
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>s开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p>
+                        <code>s</code>用来标注没用的、不正确、不准确的文本，<br>
+                        如果是删除的、替换的文本用del标注<br>
+                        导师：<s>你的实验数据复现不出来</s><br>
+                        导师：<del>重新做实验</del><ins>延毕吧！</ins>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>section</code>定义了文档的某个区域。比如章节、头部、底部或者文档的其他区域<br>
+                        与div的区别在于div是一个空容器，方便设置布局；<br>
+                        section用于文章内部，可以被浏览器检索，专用于标识文档中独立、有主题的内容区域，需搭配标题使用；
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>s</code>用来标注没用的、不正确、不准确的文本，<br>
+                        如果是删除的、替换的文本用del标注<br>
+                        导师：<s>你的实验数据复现不出来</s><br>
+                        导师：<del>重新做实验</del><ins>延毕吧！</ins>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>section</code>定义了文档的某个区域。比如章节、头部、底部或者文档的其他区域<br>
+                        与div的区别在于div是一个空容器，方便设置布局；<br>
+                        section用于文章内部，可以被浏览器检索，专用于标识文档中独立、有主题的内容区域，需搭配标题使用；
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>source</code>为媒体元素（比如 video和 audio）定义媒体资源。允许您规定两个视频/音频文件供浏览器根据它对媒体类型或者编解码器的支持进行选择<br>
+                        <audio controls>
+                            <source src="鸟叫.mp3" type="audio/mp3">
+                            <source src="鸟叫.ogg" type="audio/ogg">
+                        </audio>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>span</code>用于对文档中的行内元素进行组合。对文档内容进行css？
+                        <br>我的猫是<span style="color: #e4ad6e;">黄色</span>的,我的衣服是<span
+                            style="color: rgb(10, 125, 125);">蓝色</span>的
+                    </p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>t开头标签</h1>
+            <ol class="roman">
+                <li class="flex column align">
+                    <p>
+                        <code>table</code>定义一个表格<br>
+                        <code>tr</code>定义单元行<br>
+                        表头单元格 - 包含头部信息（由 th 创建<br>
+                        标准单元格 - 包含数据（由 td 元素创建）<br>
+                        th 元素中的文本通常呈现为粗体并且居中。<br>
+                        td 元素中的文本通常是普通的左对齐文本。<br>
+                        thead、tbody、tfoot,出现在 caption、colgroup之后
+                        <br>thead、tbody、tfoot的存在可以在打印长篇文章时都有thead、tfoot的内容
+
+                    <table border="1">
+                        <caption>年收入</caption>
+
+                        <colgroup>
+                            <col style="background-color: #e4ad6e;">
+                            <col span="2" style="background-color: #50d26e;">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th>月份</th>
+                                <th>收入</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>上半年</th>
+                                <th>60</th>
+                            </tr>
+                            <tr>
+                                <th>下半年</th>
+                                <th>50</th>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>总结</th>
+                                <th>110</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    </p>
+                </li>
+
+                <li class="flex column align">
+                    <p><br>
+                        <code>textarea</code>规定一个可输入内容的文本框<br>
+                        <textarea cols="30" rows="4" placeholder="nihao" wrap="hard">
+                        </textarea>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>template</code>用于隐藏一些内容,后续用JavaScript互动点开
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <code>time</code>定义公历的时间（24 小时制）或日期，时间和时区偏移是可选的。<br>
+                        被机器识别后可用于日程提醒操作、浏览器方便搜索等操作<br>
+                    <p>我将在<time datetime="2026-06-01">儿童节</time>买个冰棒吃</p>
+                    </p>
+                </li>
+
+                <li class="flex column align">
+                    <p><br>
+                        <code>video</code>定义视频<br>
+                        <code>track</code>为视频添加字幕<br>
+                        <video controls src="video/blender.blacklong.mp4" style="height: 300px;">
+                            <track 暂时没有>
+                        </video>
+                    </p>
+                </li>
+
+            </ol>
+        </div>
+
+        <div class="flex column align baise"
+            style="width: 800px;margin-top: 2;margin-bottom: 2;padding-left: 1;padding-right: 1;">
+            <h1>w开头标签</h1>
+            <ol class="roman">
+                <li>
+                    <p>
+                        <code>wbr</code>规定了在何处实行换行<br>
+                    <p>尝试缩小浏览器窗口，以下段落的 "XMLHttpRequest" 单词会被分行：</p>
+
+                    <p>学习 AJAX ,您必须熟悉 <wbr>Http<wbr>Request 对象。</p>
+                    </p>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- 底部版权栏 -->
+    <div class="flex column padding zongse align" 
+         style="height: 100px;width: 100%;;">
+        <p>我的html tage 练习笔记</p>
+        <p>该网页属于自用，没有商用哦</p>
+
+    </div>
 </body>
 
 </html>
