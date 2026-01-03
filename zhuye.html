@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nianfeng51的主页</title>
+</head>
+<style>
+  body {
+    background-color: rgb(232, 224, 196);
+    margin: 0;
+    height: auto
+  }
+
+  div {
+    border: #000 solid 1px;
+  }
+
+  li {
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  /* * {
+        border: 1px solid black;
+
+    } */
+
+  * {
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .flex1 {
+    flex: 1;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+
+  .zongse {
+    background-color: rgb(223, 164, 80);
+  }
+
+  .baise {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .padding {
+    padding: 1;
+  }
+
+  .mag8 {
+    margin: 8px;
+  }
+
+  .wrap {
+    flex-wrap: wrap;
+  }
+
+  .align {
+    align-items: center;
+  }
+
+  .justify {
+    justify-content: center;
+  }
+
+  code {
+    font-size: 20px;
+    color: brown;
+  }
+
+  button {
+    width: fit-content;
+  }
+
+  .shadow {
+    box-shadow: 5px 5px 3px #888888;
+    ;
+  }
+
+  .lanse {
+    background-color: rgb(240, 247, 250);
+  }
+
+  .roman {
+    list-style-type: lower-roman;
+  }
+
+  p {
+    text-indent: 40px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+
+  a:link {
+    color: #247cca;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: #232323;
+  }
+
+  a:hover {
+    color: #ff00ff;
+  }
+
+  a:active {
+    color: #0000ff;
+  }
+</style>
+
+<body class="flex column">
+  <!-- 顶部导航栏 -->
+  <div class="flex" style="height: 80px">
+    <!-- 网页logo -->
+    <div style="width: 100px;" class="lanse flex justify">
+      <img src="img/头像.jpg" alt="头像">
+    </div>
+
+    <!-- 水平导航栏 -->
+    <div class="flex lanse " style="width: 800px ;justify-content: space-around;align-items: center;">
+      <a href="bijiben/biji.html">学习笔记</a>
+      <a href="">作品</a>
+      <a href="">推荐</a>
+      <a href="">我们</a>
+      <a href="">帮助</a>
+
+      <form class="example" action="action_page.php">
+        <input type="text" placeholder="搜索.." name="search">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+
+    <!-- 消息区 -->
+    <div class="flex flex1 lanse" style="justify-content: space-around;align-items: center;">
+      <a href="">
+        <img src="img/tubiao/提醒.webp" alt="提醒" width="40px" >
+      </a>
+      <a href="">
+        <img src="img/tubiao/私信.png" alt="提醒" width="40px" >
+      </a>
+    </div>
+  </div>
+
+  <!-- 主要内容区 -->
+  <div class="flex column flex1 align lanse" style="
+        padding-top: 50px;
+        background-image: url(img/背景.jpg);
+        background-repeat: repeat-y;
+      ">
+    <!-- 网页图片 -->
+    <div>
+      <img src="img/zayu.png" alt="zayu" width="400px" />
+      <h1 style="font-size: medium">杂鱼的专属网站</h1>
+    </div>
+
+    <!-- 推荐区 -->
+    <div class="flex column" style="margin-top: 150px;margin-right: 400px;margin-left: 400px;margin-bottom: 50px;">
+      <h1 style="font-size: medium">专栏 · 发现</h1>
+      <!-- 推荐栏 -->
+      <div class="flex wrap" style="align-content: center;">
+        <div class="baise mag8 shadow lanse " style="width:150px; height: 200px;"></div>
+        <div class="baise mag8 shadow lanse " style="width:150px; height: 200px;"></div>
+        <div class="baise mag8 shadow lanse " style="width:150px; height: 200px;"></div>
+        <div class="baise mag8 shadow lanse " style="width:150px; height: 200px;"></div>
+        <div class="baise mag8 shadow lanse " style="width:150px; height: 200px;"></div>
+        <div class="baise mag8 shadow lanse " style="width:150px; height: 200px;"></div>
+        <div class="baise mag8 shadow lanse " style="width:150px; height: 200px;"></div>
+        <div class="baise mag8 shadow lanse " style="width:150px; height: 200px;"></div>
+
+      </div>
+
+      <!-- 版权，备案号 -->
+      <div class="flex column align" style="margin-top: 100px;">
+        <h1 style="border: #000 1px solid;
+            border-left: hidden;border-right: hidden;
+            border-color: #e714af;
+            letter-spacing: 30px;">
+          在网上吹牛
+        </h1>
+
+        <div class="flex flex-wrap" style="margin-top: 50px;">
+          <a href="">备案号</a>|
+          <a href="">版权</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</body>
+
+</html>
