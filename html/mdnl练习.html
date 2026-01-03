@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+
+  </style>
+
+  <body style="display: flex;flex-direction: column;">
+
+
+    <p>My cat is <strong>very</strong> grumpy.</p>
+    <!-- strong加粗 -->
+    <input type="text" />
+    <input type="text" disabled="disabled" />
+    <!-- input,输入框； 
+      disabled，使输入框无法输入，是一种布尔属性，可单独作为一个属性，没有值=“ ” -->
+
+    <!-- ul 无序列表 -->
+    <ul>
+      <li>milk</li>
+      <li>eggs</li>
+      <li>bread</li>
+      <li>hummus</li>
+    </ul>
+
+    <!-- ol 有序列表 -->
+    <ol>
+      <li>milk</li>
+      <li>eggs</li>
+      <li>bread</li>
+      <li>hummus</li>
+    </ol>
+
+    <!-- 嵌套列表 -->
+    <ol>
+      <li>milk</li>
+      <li>eggs</li>
+      <li>
+        breds
+        <ul>
+          <li>123456</li>
+          <li>123456</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- 斜体-<em>,粗体-<strong>,下划线-<mark>-->
+    <p>
+      我是斜的<strong> <em>我是<mark>斜的吗</mark></em></strong>
+    </p>
+    <p>
+      <em>对，我就是<strong>斜的</strong></em>
+    </p>
+
+<!-- <br> 可以在不添加新标签的时候换行 -->
+<p>这是<br>换行，<br>而且不用结束添加/br</p>
+
+<p style="display: flex;flex-direction: column;">
+  <b>粗体</b>
+<em>斜体</em>
+<i>斜体</i>
+<small>小号</small>
+<strong>粗体<sup>上标签</sup><sub>下标签</sub></strong>
+<del>删除350234</del>
+</p>
+
+<!-- 以下看不懂 HTML "计算机输出" 标签 -->
+ 
+<code>	定义计算机代码</code>
+<kbd>定义键盘码</kbd>
+<samp>定义计算机代码样本</samp>
+<var>	定义变量</var>
+<pre>定义预格式文本</pre>
+
+<!-- HTML 引文, 引用, 及标签定义 -->
+<p style="display: flex;flex-direction: column;">
+<abbr>定义缩写</abbr>
+<address>定义地址</address>
+<bdo>定义文字方向</bdo>
+<blockquote>定义长的引用</blockquote>
+<q>定义短的引用语</q>
+<cite>定义引用、引证</cite>
+<dfn>定义一个定义项目</dfn>
+</p>
+
+<!-- 举例的点赞函数一刷新就没了 -->
+点赞函数
+<button id="553" onclick="dianzan()">5</button>
+<script>
+  function dianzan(){
+    let dianzanbiaoqian = window.document.getElementById(553);
+    let dianzanshu = parseInt(dianzanbiaoqian.innerText);
+    let xinshuzi = dianzanshu +1 ;
+    dianzanbiaoqian.innerText=xinshuzi;
+  }
+</script>
+
+<!-- 真实的点赞函数需要在服务器上运行 -->
+ <button id="dzh" onclick="dianzan()">5</button>
+<script>
+  function dianzan(uid,bv){
+    let JiLu = database.get (点赞记录,uid,bv);
+
+    if(JiLu){
+      let dianzanshu = database.delete('点赞数',bv,);
+      database delete(点赞记录,bv,1);
+      document.getElementById('dzh').innerText;
+    }
+
+    else(JiLu){
+      let dianzanshu = database.add('点赞数,bv');
+      database add(点赞记录,bv,1);
+      document.getElementById('dzh').innerText;
+    }
+  }
+</script>
+<!-- 点赞函数
+    调用database数据库，看相关uid及bv是否有点赞记录
+
+    if,就是有，则执行取消点赞函数{
+    使数据库点赞数减少；
+       也就是数据库中该视频点赞数 减一；
+       最后 让数据返回到该页面；
+    }
+    
+    eles,就是没有，则执行点赞函数{
+    使数据库点赞数增加；
+       也就是数据库中该视频点赞数 加一；
+       最后 让数据返回到该页面；
+    }
+    该处database为一个假象的数据库，即伪元素   
+     -->
+
+
+  </body>
+</html>
+

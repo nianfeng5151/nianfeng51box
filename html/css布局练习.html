@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{margin: 0;
+    height: 100vh;
+    background-color: rgb(198, 218, 218);
+    }
+     /* *{
+        border: 1px solid black;
+    }  */
+    .flex{
+        display: flex;
+        
+    }
+    .baise{
+        background-color:#fff;
+    }
+    .flex1{
+        flex:1
+    }
+    .flex3{
+        flex:3
+    }
+    .column{
+        flex-direction: column;}
+    .mag8{
+        margin: 8px;
+    }
+    .magt8{
+        margin-top: 8px;
+    }
+    .magr8{
+        margin-right: 8px;
+    }
+    .yinying{
+        box-shadow: 5px 5px 3px #888888;;
+    }
+   @media  (max-width:600px) {
+    .cebian{
+        display: none;
+    }
+    .neirong{
+    flex-direction: column;
+   }
+   .shujuqu{
+    flex-direction: column;
+    min-height: 100px;
+     height: auto;
+     
+      
+      
+   }
+   .youqu{
+    margin-left: 8px;
+   }
+   .shuju{
+    margin: 0 0 8px;
+    flex: auto;
+  
+   }
+   }
+   
+    
+</style>
+<body class="flex">
+
+    <!--侧边栏-->
+    <div style="width: 150px ; z-index: 1;" class="cebian yinying baise ">
+    <!-- z-index: 1 用于将头部拦和侧边栏固定在最上层-->
+    </div>
+
+     <!--主要栏-->
+    <div class="flex column flex1">
+        <!--顶部栏-->
+        <div class="baise yinying" style="z-index: 1; flex-basis: 60px;flex-grow: 0;" ><!--防止顶部栏被压缩-->
+           <!--顶部栏被压缩的原因是列表区内容超过整块屏幕，从而压缩顶部栏，可在顶部栏输入flex-shrink: 0; 
+           或者在内容区加overflow: auto; 
+           -->
+        </div>
+       
+        <!--内容区-->
+        <div style="overflow: auto;" class="flex flex1 neirong" >
+            <!--左区-->
+            <div class=" column flex mag8" style="flex: 3;">
+                <!--数据区-->
+                <div style="height: 100px; "
+                
+                class="flex shujuqu">
+                    <!--数据-->
+                    <div class="flex1 baise  yinying magr8 "> 1</div>
+                    <div class="flex1 baise  yinying magr8 ">2</div>
+                    <div class="flex1 baise  yinying magr8 ">3</div>
+                    <div class="flex1 baise  yinying ">4</div>
+                </div>
+                <!--列表区-->
+                <div class="flex1 flex column">
+                    <!-- 列表项 -->
+                    <div style="height: 160px " class=" magt8 baise yinying"></div>
+                    <div style="height: 160px " class=" magt8 baise yinying"></div>
+                    <div style="height: 160px " class=" magt8 baise yinying"></div>
+                    <div style="height: 160px " class=" magt8 baise yinying"></div>
+                    <div style="height: 160px " class=" magt8 baise yinying"></div>
+                    
+                    
+                </div>
+            </div>
+
+            <!--右区-->
+            <div class="flex column magr8 magt8 " style="flex:1" >
+                <!--提示区-->
+                <div style="height: 150px;" class=" baise yinying"></div>
+                <!--消息区-->
+                <div style="height: 300px;" class="magt8 baise yinying" >555</div>
+            </div>
+        </div>
+    </div>
+   
+
+</body>
+</html>

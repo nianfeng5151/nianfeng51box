@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: antiquewhite;
+    }
+
+    /* *{
+            border: 1px solid black;
+        } */
+    .flex {
+      display: flex;
+    }
+
+    .flex1 {
+      flex: 1;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .white {
+      background-color: white;
+    }
+
+    .mag8 {
+      margin: 8px;
+    }
+
+    .magt8 {
+      margin-top: 8px;
+    }
+
+    .magr8 {
+      margin-right: 8px;
+    }
+
+    .shadow {
+      box-shadow: 5px 5px 3px #d1c09c;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      border: 1px solid rgb(235, 235, 235);
+
+    }
+
+    a:link,
+    a:visited {
+      display: block;
+      color: rgb(255, 255, 255);
+      background-color: rgb(230, 204, 170);
+      font-size: larger;
+      font-weight: bolder;
+      text-align: center;
+      padding: 5%;
+      border: bottom 1px solid rgb(237, 190, 132);
+      text-decoration: none;
+    }
+
+    li a {
+      border-bottom: 1px solid rgb(0, 0, 0);
+    }
+
+    a:hover {
+      background-color: rgb(195, 173, 144);
+    }
+
+    a:active {
+      background-color: rgb(144, 120, 85);
+    }
+
+    @media (max-width: 600px) {
+      .cebianlan {
+        display: none;
+      }
+
+      .neironfqu {
+        flex-direction: column;
+      }
+
+      .shujuqu {
+        flex-direction: column;
+      }
+
+      .shuju {
+        margin: 0 0 8px;
+        flex: auto;
+      }
+
+      .youqu {
+        margin-left: 8px;
+      }
+    }
+  </style>
+</head>
+
+<body class="flex">
+  <!-- 侧边栏 -->
+  <div style="width: 300px; z-index: 2" class=" flex column shadow cebianlan">
+    <!-- 头像栏 -->
+    <div class="flex column" style="height: 300px; 
+      border-bottom: black solid 1px;
+      justify-content: center;
+      align-items:center ;">
+      <img
+        src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMcmVpOXvyrfm6GEdOhAtf8Kq8ooN5dQACIR8AApKD0FX02CztY9_8YjYE.jpg"
+        alt="年风51" width="80px" height="110px">
+      <p>nianfeng51的网站</p>
+      <p>概览</p>
+
+    </div>
+
+    <!-- 导航栏 -->
+    <div class="flex column flex1 ">
+      <ul>
+        <li>
+          <a class="active" href="">主页</a>
+          <a class="active" href="">数据</a>
+          <a class="active" href="">项目</a>
+          <a class="active" href="">消息</a>
+          <a class="active" href="">提示</a>
+          <a class="active" href="">关于</a>
+          <a class="active" href="">联系</a>
+
+        </li>
+      </ul>
+
+
+
+    </div>
+  </div>
+
+  <!-- 主要栏 -->
+  <div class="flex column flex1">
+    <!-- 顶部栏 -->
+    <div style="height: 60px; z-index: 1" class=" shadow"></div>
+
+    <!-- 内容区 -->
+    <div class="flex flex1 mag8 neironfqu" style="overflow: auto">
+      <!-- 左区 -->
+      <div class="flex column magr8" style="flex: 3">
+        <!-- 数据区 -->
+        <div class="flex shujuqu">
+          <!-- 数据拦 -->
+          <div style="height: 100px" class="white shuju flex1 magr8 shadow"></div>
+          <div style="height: 100px" class="white shuju flex1 magr8 shadow"></div>
+          <div style="height: 100px" class="white shuju flex1 magr8 shadow"></div>
+          <div style="height: 100px" class="white shuju flex1 magr8 shadow"></div>
+        </div>
+        <!-- 项目栏 -->
+        <div class="flex column flex1 magt8">
+          <!-- 项目 -->
+          <div class="white magt8 shadow" style="height: 160px"></div>
+          <div class="white magt8 shadow" style="height: 160px"></div>
+          <div class="white magt8 shadow" style="height: 160px"></div>
+          <div class="white magt8 shadow" style="height: 160px"></div>
+        </div>
+      </div>
+
+      <!-- 右区 -->
+      <div class="flex column flex1 youqu">
+        <!-- 提醒区 -->
+        <div style="height: 300px" class="white shadow magr8"></div>
+        <!-- 消息区 -->
+        <div class="white shadow magt8 magr8" style="height: 450px"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
