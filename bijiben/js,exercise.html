@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js练习</title>
+    <link rel="stylesheet" href="../css/zhuye.css">
+</head>
+
+<body class="flex column">
+    <!-- 顶部导航栏 -->
+    <div class="flex" style="height: 80px;margin:0;">
+        <!-- 网页logo -->
+        <div style="width: 100px;" class="lanse flex justify">
+            <a href="../index.html">
+                <img src="../img/头像.jpg" alt="头像" style="height: 50px;">
+            </a>
+
+        </div>
+
+        <!-- 水平导航栏 -->
+        <div class="flex lanse " style="width: 800px ;justify-content: space-around;align-items: center;">
+            <a href="biji.html">学习笔记</a>
+            <a href="">作品</a>
+            <a href="">推荐</a>
+            <a href="">我们</a>
+            <a href="">帮助</a>
+
+            <form class="example" action="action_page.php">
+                <input type="text" placeholder="搜索.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+        <!-- 消息区 -->
+        <div class="flex flex1 lanse" style="justify-content: space-around;align-items: center;">
+            <a href="">
+                <img src="../img/tubiao/提醒.webp" alt="提醒" width="40px">
+            </a>
+            <a href="">
+                <img src="../img/tubiao/私信.png" alt="提醒" width="40px">
+            </a>
+        </div>
+    </div>
+
+    <!-- 主要内容区 -->
+    <div class="flex column flex1 align " style="
+        padding-top: 50px;
+        background-image: url(../img/背景.jpg);
+        background-repeat: repeat-y;
+        background-color: rgb(239, 231, 219);
+      ">
+        <!-- js练习 -->
+        <div class="flex column">
+            <!-- 警告框 -->
+            <script>
+                window.alert("警告，点开自动下载千恋万花哦，ciallow")       
+            </script>
+
+            <!-- 操作 HTML 元素 -->
+             <h1 id="biaoti">
+                我的第一个web页面
+             </h1>
+             <p id="biaozhu">你好世界！</p>
+             <script>
+                document.getElementById("biaozhu").innerHTML="hello world!"
+             </script>
+             <script>
+                document.getElementById("biaoti").innerHTML="MY first web page"
+             </script>
+
+             <!-- 写到HTNL文档 -->
+              <script>
+                document.write( "当前日期和时间是: " + Date())
+              </script>
+
+              <p id="shijian">点击按钮后这里变成时间</p>
+
+              <button onclick="gaibian()">点击我</button>
+              <script>
+                function gaibian(){
+                    document.write(Date())
+                }
+              </script>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="flex flex-wrap justify align" style="margin-top: 50px;">
+        <a href="">备案号</a>|
+        <a href="">版权</a>
+
+    </div>
+</body>
+
+</html>
